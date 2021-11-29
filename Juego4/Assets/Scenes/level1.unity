@@ -31245,6 +31245,12 @@ Transform:
   m_Father: {fileID: 366388294}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.814001}
+--- !u!1 &2035835148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095409437928357123, guid: 9122afcb903629d4a86fabb505948791,
+    type: 3}
+  m_PrefabInstance: {fileID: 8095409438531509567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041827505
 GameObject:
   m_ObjectHideFlags: 0
@@ -32568,7 +32574,7 @@ PrefabInstance:
         type: 3}
       propertyPath: obj_afect_por_lentes1
       value: 
-      objectReference: {fileID: 327485191}
+      objectReference: {fileID: 2035835148}
     - target: {fileID: 696879261524208306, guid: 350cebe793308b943aa732478f94dd6a,
         type: 3}
       propertyPath: m_RootOrder
@@ -33044,6 +33050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095409437928357123, guid: 9122afcb903629d4a86fabb505948791,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9122afcb903629d4a86fabb505948791, type: 3}
