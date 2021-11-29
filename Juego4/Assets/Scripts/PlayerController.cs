@@ -12,10 +12,15 @@ public class PlayerController : MonoBehaviour
     // public GameObject gameOverScreen;
     // public GameManager theGameManager;
     public GameObject obj_afect_por_lentes1;
+    public GameObject obj_afect_por_lentes12;
+    public GameObject obj_afect_por_lentes13;
+    public GameObject obj_afect_por_lentes2;
+    public GameObject obj_afect_por_lentes22;
     public int cambio_lentes1=0;
+    public int cambio_lentes2=0;
 
-    public bool tienelentes1=false; //esto modificarlo empezando en falso
-
+    public bool tienelentes1=false; 
+    public bool tienelentes2=false;
 
     float fireRate = 0;
     float nextfire = 0;
@@ -94,17 +99,48 @@ public class PlayerController : MonoBehaviour
                     if(cambio_lentes1%2==1)
                     {
                         obj_afect_por_lentes1.SetActive(false);
+                        obj_afect_por_lentes12.SetActive(false);
+                        obj_afect_por_lentes13.SetActive(false);
                     }
                     else
                     {
                     obj_afect_por_lentes1.SetActive(true); 
+                    obj_afect_por_lentes12.SetActive(true);
+                    obj_afect_por_lentes13.SetActive(true);
                     }
+
                  }
                  else{
                      Debug.Log("No puedes usar tecla 1");
                  }
 
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) )
+            {
+                if (tienelentes2 == true )
+                 {
+                    Debug.Log("Puedes usar tecla 2");
+                    //ejecutar set active..
+                    cambio_lentes2++;
+                    if(cambio_lentes2%2==1)
+                    {
+                        obj_afect_por_lentes2.SetActive(false);
+                        obj_afect_por_lentes22.SetActive(false);
+                    }
+                    else
+                    {
+                    obj_afect_por_lentes2.SetActive(true); 
+                    obj_afect_por_lentes22.SetActive(true);
+                    }
+                 }
+                 else{
+                     Debug.Log("No puedes usar tecla 2");
+                 }
+
+            }
+
+
 
           }
         }
