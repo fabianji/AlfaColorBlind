@@ -19,9 +19,11 @@ public class PlayerController : MonoBehaviour
     public int cambio_lentes1=0;
     public int cambio_lentes2=0;
 
+    public int total_lentes=0;
+
     public bool tienelentes1=false; 
     public bool tienelentes2=false;
-
+    
     float fireRate = 0;
     float nextfire = 0;
     // untuk mengatur kecepatan saat Player bergerak
@@ -272,8 +274,13 @@ public class PlayerController : MonoBehaviour
 
     public void Hit()
     {
+        total_lentes++;
         tienelentes1 = true;
         Debug.Log("Agarraste lentes 1");
+        if (total_lentes == 2){
+            tienelentes2 = true;
+            Debug.Log("Agarraste lentes 2");
+        }
     }
 
 }
